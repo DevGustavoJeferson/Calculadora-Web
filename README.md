@@ -11,6 +11,8 @@ Projeto de uma calculadora web desenvolvida com **HTML, CSS e JavaScript**, com 
 
 Este projeto faz parte do meu portfólio de estudos em desenvolvimento front-end.
 
+Para visualizar o projeto acesse: http://devgustavojeferson.github.io/Calculadora-Web/calculadora/
+
 ---
 
 ## 🎯 Objetivo do Projeto
