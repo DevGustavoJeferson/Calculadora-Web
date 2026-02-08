@@ -77,17 +77,36 @@ main > section#container {
 
 .num {
     background-color: var(--cor4);
+    transition: 0.2s;
 }
 
 .operation {
     background-color: var(--cor5);
     font-weight: bolder;
+    transition: 0.2s;
 }
 
 #igual {
     background-color: var(--cor6);
     color: white;
+    transition: 0.2s;
 }
+
+.num:active , .operation:active {
+    outline: 4px solid var(--cor2);
+    border: none;
+    color: var(--cor1);
+    background-color: var(--cor7);
+    transform: scale(0.1);
+}
+
+#igual:active {
+    outline: 4px solid var(--cor2);
+    border: none;
+    color: black;
+    background-color: var(--cor1);
+}
+
 
 footer {
     display: flex;
@@ -110,8 +129,14 @@ footer > p > strong > a {
     background-color: var(--cor1);
     border-radius: 10px;
     border: 2px solid var(--cor5);
+    transition: 0.1s;
 }
 
 footer > p > strong {
     font-family: var(--font1);
+}
+
+footer > p > strong > a:active{
+    text-decoration: underline;
+    color: var(--cor7);
 }
