@@ -92,19 +92,16 @@ main > section#container {
     transition: 0.2s;
 }
 
+/*ANIMAÇÃO AO TOCAR NA TELA, --INSET-- CRIA UMA SOMBRA PARA DENTRO, DANDO UMA SENSAÇÃO DE PROFUNDIDADE*/
 .num:active , .operation:active {
-    outline: 4px solid var(--cor2);
-    border: none;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
     color: var(--cor1);
     background-color: var(--cor7);
-    transform: scale(0.1);
+    transform: scale(0.95);
 }
 
 #igual:active {
-    outline: 4px solid var(--cor2);
-    border: none;
     color: black;
-    background-color: var(--cor1);
 }
 
 
