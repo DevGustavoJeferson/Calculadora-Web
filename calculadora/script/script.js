@@ -1,56 +1,30 @@
-//PEGANDO OS VALORES DO HTML
+//PEGANDO O DISPLAY DO HTML
 const display = document.querySelector('.display')
+//PEGANDO OS BOTOES
 const botoes = document.querySelectorAll('button')
 
+//LAÇO PARA CAPTURAR TODO VALOR DOS BOTAOES, SEU PARAMETRO É UM VALOR DOS BOTAOES
 botoes.forEach((botao) => {
+    //ADD EVENTO NO BOTAO
     botao.addEventListener('click', () => {
-        const valor = botao.dataset.value;
-        switch (valor) {
-            case '1':
-                display.textContent += `${valor}`
-                break;
-            case '2':
-                display.textContent += `${valor}`
-                break;
-            case '3':
-                display.textContent += `${valor}`
-                break;
-            case '4':
-                display.textContent += `${valor}`
-                break;
-            case '5':
-                display.textContent += `${valor}`
-                break;
-            case '6':
-                display.textContent += `${valor}`
-                break;
-            case '7':
-                display.textContent += `${valor}`
-                break;
-            case '8':
-                display.textContent += `${valor}`
-                break;
-            case '9':
-                display.textContent += `${valor}`
-                break;
-            case 'C':
-                display.textContent += `Limpar tudo`
-                break;
-            case '+':
-                display.textContent += `${valor}`
-                break;
-            case '-':
-                display.textContent += `${valor}`
-                break;
-            case '*':
-                display.textContent += `${valor}`
-                break;
-            case '/':
-                display.textContent += `${valor}`
-                break;
-            case '=':
-                display.textContent += `Realizar operação`
-                break;
+        //RECEBENDO O VALOR DE DATASET DO BOTAO
+        let valor = botao.dataset.value;
+
+        // ARRAYS NUMERICOS
+        const valorNumerico = ["1","2","3","4","5","6","7","8","9"]
+
+
+        //CONDICIONAL PARA VALIDAR OS NUMEROS, E CONVERTER DE STRING PARA INT
+        if(valorNumerico.includes(valor)){
+            valor = Number(valor)
+        }
+
+        //MOSTRANDO O CAPTURADO NO DISPLAY
+        display.textContent += `${valor}`
+
+        //ZERANDO A CALCULADORA SE O C FOR ACIONADO
+        if(valor === "C"){
+            display.textContent = ''
         }
     })
 });
